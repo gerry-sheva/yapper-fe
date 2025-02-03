@@ -5,12 +5,14 @@ import "./globals.css";
 const roboto = Roboto({
     variable: "--font-roboto",
     weight: ["700", "500", "300"],
+    display: "swap",
     subsets: ["latin"]
 })
 
 const robotoMono = Roboto_Mono({
     variable: "--font-roboto-mono",
     weight: ["700", "500", "300"],
+    display: "swap",
     subsets: ["latin"]
 })
 
