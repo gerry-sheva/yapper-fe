@@ -1,4 +1,4 @@
-import Sidebar from "@/app/(home)/components/Sidebar";
+import LeftSidebar from "@/app/(home)/components/LeftSidebar";
 
 export default function HomeLayout({
 children,
@@ -6,8 +6,8 @@ children,
     children: React.ReactNode;
 }>) {
     return (
-        <div className={"flex min-h-screen"}>
-            <Sidebar />
+        <div className={"flex min-h-screen w-screen"}>
+            <LeftSidebar />
             {children}
         </div>
     );

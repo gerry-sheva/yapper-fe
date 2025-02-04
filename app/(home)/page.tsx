@@ -1,11 +1,11 @@
 import {FC} from "react";
+import TwoContent from "@/app/(home)/components/TwoContent";
+import RightSidebar from "@/app/(home)/components/RightSidebar";
 
 
 const Home: FC = () => {
     return (
-        <main>
-            <h1>Home page</h1>
-        </main>
+        <TwoContent main={<h1>Main</h1>} right={<RightSidebar />} />
     )
 }
 

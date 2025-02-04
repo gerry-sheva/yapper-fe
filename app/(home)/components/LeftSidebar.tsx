@@ -5,9 +5,9 @@ import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
 
-const Sidebar: FC = () => {
+const LeftSidebar: FC = () => {
     return (
-        <section className={"min-w-[320px] border-r flex flex-col items-end justify-between pr-2 py-6"}>
+        <section className={"min-w-[320px] 2xl:min-w-[640px] flex flex-col items-end justify-between pr-2 py-6"}>
             <nav className={"w-60 gap-2"}>
                 <h1 className={"font-bold pl-2 text-xl"}>Yapper</h1>
                 <Item logo={<House />} text={"Home"}/>
@@ -25,7 +25,7 @@ const Sidebar: FC = () => {
     )
 }
 
-export default Sidebar;
+export default LeftSidebar;
 
 interface ItemProps {
     logo: ReactNode
