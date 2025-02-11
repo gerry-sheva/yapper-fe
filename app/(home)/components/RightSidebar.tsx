@@ -3,6 +3,7 @@ import Link from "next/link";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {Search} from "lucide-react";
+import AvatarInfoCard from "@/app/(home)/components/avatar/AvatarInfoCard";
 
 
 const RightSidebar: FC = () => {
@@ -64,16 +65,7 @@ const FollowSuggestions: FC = () => {
 const People: FC = () => {
     return (
         <div className={"flex px-4 py-2 items-center justify-between hover:bg-gray-100"}>
-            <div className={"flex gap-1"}>
-                <Avatar className={"h-12 w-12"}>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <div className={"flex flex-col"}>
-                    <p className={"font-semibold"}>Username</p>
-                    <p className={"text-gray-600 font-light"}>@Userhandler</p>
-                </div>
-            </div>
+            <AvatarInfoCard />
             <Button className={"bg-brand text-white rounded-3xl font-bold hover:bg-brand-dark"}>Follow</Button>
         </div>
     )

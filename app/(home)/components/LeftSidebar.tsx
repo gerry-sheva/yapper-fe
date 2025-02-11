@@ -3,6 +3,7 @@ import {Bell, Bookmark, CircleEllipsis, Ellipsis, House, Mail, Search, User, Use
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import AvatarComponent from "@/app/(home)/components/avatar/AvatarComponent";
 
 
 const LeftSidebar: FC = () => {
@@ -20,7 +21,10 @@ const LeftSidebar: FC = () => {
                 <Item logo={<CircleEllipsis />} text={"More"}/>
                 <Button className={"w-60 py-5 bg-brand rounded-2xl text-white font-bold hover:bg-brand-dark"}>Yap</Button>
             </nav>
-            <UserComponent />
+            <div className={"flex w-60 pr-2 items-center justify-between rounded-3xl hover:bg-gray-100"}>
+                <AvatarComponent />
+                <Ellipsis className={"items-end"} />
+            </div>
         </section>
     )
 }
@@ -40,23 +44,5 @@ const Item: FC<ItemProps> = ({logo, text}) => {
                 <p>{text}</p>
             </div>
         </Link>
-    )
-}
-
-const UserComponent: FC = () => {
-    return (
-        <div className={"flex w-60 pr-2 items-center justify-between rounded-3xl hover:bg-gray-100"}>
-            <div className={"flex gap-1"}>
-                <Avatar className={"h-12 w-12"}>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <div className={"flex flex-col"}>
-                    <p>Username</p>
-                    <p className={"text-gray-600"}>@Userhandler</p>
-                </div>
-            </div>
-            <Ellipsis className={"items-end"} />
-        </div>
     )
 }
