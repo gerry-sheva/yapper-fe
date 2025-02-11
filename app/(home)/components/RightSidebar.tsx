@@ -4,6 +4,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {Search} from "lucide-react";
 import AvatarInfoCard from "@/app/(home)/components/avatar/AvatarInfoCard";
+import FollowButton from "@/app/(home)/components/button/FollowButton";
 
 
 const RightSidebar: FC = () => {
@@ -66,7 +67,7 @@ const People: FC = () => {
     return (
         <div className={"flex px-4 py-2 items-center justify-between hover:bg-gray-100"}>
             <AvatarInfoCard />
-            <Button className={"bg-brand text-white rounded-3xl font-bold hover:bg-brand-dark"}>Follow</Button>
+            <FollowButton />
         </div>
     )
 }
