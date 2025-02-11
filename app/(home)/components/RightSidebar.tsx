@@ -1,7 +1,5 @@
 import {FC} from "react";
 import Link from "next/link";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
 import {Search} from "lucide-react";
 import AvatarInfoCard from "@/app/(home)/components/avatar/AvatarInfoCard";
 import FollowButton from "@/app/(home)/components/button/FollowButton";
